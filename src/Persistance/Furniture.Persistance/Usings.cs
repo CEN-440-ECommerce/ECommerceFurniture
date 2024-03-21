@@ -1,0 +1,12 @@
+﻿global using Furniture.Domain;
+global using Furniture.Domain.Entities;
+global using Microsoft.EntityFrameworkCore;
+global using Endpoint = Furniture.Domain.Entities.Endpoint;
+global using File = Furniture.Domain.File;
+global using Furniture.Domain.Entities.Common;
+global using Furniture.Persistance.Context;
+global using System;
+global using System.Collections.Generic;
+global using System.Linq;
+global using System.Linq.Expressions;
+global using Furniture.Application.Interfaces;
