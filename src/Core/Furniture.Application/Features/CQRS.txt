@@ -1,0 +1,23 @@
+GetxxxQueryHandler:
+
+Bu sýnýf, bir sorgunun iþlenmesinden sorumlu olan bir iþlemleyicidir.
+MediatR'de, bu sýnýf, bir sorgunun sonuçlarýný döndüren ve sorguyu iþleyen ana noktadýr.
+Genellikle bir arayüz olan IRequestHandler arayüzünü uygular. Bu arayüzün, iþlemeyi gerçekleþtiren Handle metodu vardýr.
+Ýstemcinin yolladýðý sorguyu alýr, gerekli iþ mantýðýný yürütür ve sonuçlarý döndürür.
+
+
+GetxxxQueryRequest:
+
+Bu sýnýf, bir sorgunun temsilcisidir.
+MediatR'de, bir istemci tarafýndan gönderilen sorgunun modelini tanýmlar.
+Genellikle bir arayüz olan IRequest arayüzünü uygular ve geri dönüþ tipi belirler.
+Ýstemcinin isteðiyle ilgili bilgileri içerir. Örneðin, hangi rollerin alýnmak istendiði gibi.
+
+
+GetxxxQueryResponse:
+
+Bu sýnýf, bir sorgu iþlendiðinde döndürülen sonuçlarýn temsilcisidir.
+MediatR'de, bir sorgunun sonuçlarýný taþýr.
+Genellikle bir arayüz olan IRequestResponse arayüzünü uygular.
+Ýþlemcinin, sorguyu iþledikten sonra döndürdüðü sonuçlarý içerir. Örneðin, sorguya göre alýnan rollerin listesi.
+Bu üç sýnýf birlikte çalýþarak tipik bir CQRS yapý oluþtururlar. Ýstemci sorgusu (GetxxxQueryRequest) MediatR tarafýndan iþlenir ve iþlenen sonuçlar (GetxxxQueryResponse) istemciye döndürülür. Ýþlemeyi gerçekleþtiren kodlar GetxxxQueryHandler sýnýfýnda bulunur. Bu, kodun sorumluluklarýný ve iþlevselliðini daha iyi ayýrmaya ve yönetmeye olanak tanýr.
