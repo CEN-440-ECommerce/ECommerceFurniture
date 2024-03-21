@@ -1,5 +1,6 @@
 using Furniture.Application.Interfaces.Products;
 using Furniture.Persistance.Repositories;
+using Furniture.Persistance.Repositories.Products;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +12,8 @@ builder.Services.AddScoped(typeof(IRepository<>), typeof(ReadRepository<>));
 builder.Services.AddScoped(typeof(IRepository<>), typeof(WriteRepository<>));
 builder.Services.AddScoped(typeof(IReadRepository<>), typeof(ReadRepository<>));
 builder.Services.AddScoped(typeof(IWriteRepository<>), typeof(WriteRepository<>));
+builder.Services.AddScoped(typeof(IProductReadRepository), typeof(ProductReadRepository));
+builder.Services.AddScoped(typeof(IProductWriteRepository), typeof(ProductWriteRepository));
 
 builder.Services.AddControllers();
 

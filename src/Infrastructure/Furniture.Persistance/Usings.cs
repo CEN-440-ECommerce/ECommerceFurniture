@@ -12,3 +12,4 @@ global using System.Linq.Expressions;
 global using Furniture.Application.Interfaces;
 global using Microsoft.Extensions.DependencyInjection;
 global using Microsoft.Extensions.Http;
+global using Furniture.Application.Interfaces.Products;
