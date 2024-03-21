@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Persistance\Furniture.Persistance\Furniture.Persistance.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\Furniture.Persistance\Furniture.Persistance.csproj" />
   </ItemGroup>
 
 </Project>
