@@ -4,7 +4,7 @@
 	{
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(connectionString: @"Server=DESKTOP-4M0OQRD\SQLEXPRESS;Database=MyPortfolioDB;User Id=pixxaer;Password=453885;Encrypt=false;TrustServerCertificate=true;");
+            optionsBuilder.UseSqlServer(connectionString: @"Server=DESKTOP-4M0OQRD\SQLEXPRESS;Database=FurnitureDB;User Id=pixxaer;Password=453885;Encrypt=false;TrustServerCertificate=true;");
         }
         public DbSet<Product> Products { get; set; }
 		public DbSet<Order> Orders { get; set; }
