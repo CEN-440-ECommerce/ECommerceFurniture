@@ -8,6 +8,11 @@ namespace Furniture.Application.Features.Queries.Products.GetByIdProduct
 {
     public class GetByIdProductQueryRequest : IRequest<GetByIdProductQueryResponse>
     {
+        public GetByIdProductQueryRequest(string id)
+        {
+            Id = id;
+        }
+
         public string Id { get; set; }
     }
 }

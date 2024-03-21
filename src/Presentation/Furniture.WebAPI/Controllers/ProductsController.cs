@@ -1,10 +1,4 @@
-﻿using Furniture.Application.Features.Queries.Products.GetAllProduct;
-using Furniture.Application.Features.Queries.Products.GetByIdProduct;
-using MediatR;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-
-namespace Furniture.WebAPI.Controllers
+﻿namespace Furniture.WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

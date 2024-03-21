@@ -1,10 +1,16 @@
-using Furniture.Application.Interfaces;
-using Furniture.Persistance.Context;
+using Furniture.Application.Interfaces.Products;
+using Furniture.Persistance.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddApplicationServices(builder.Configuration);
+
 // Add services to the container.
 builder.Services.AddScoped<FurnitureDbContext>();
+builder.Services.AddScoped(typeof(IRepository<>), typeof(ReadRepository<>));
+builder.Services.AddScoped(typeof(IRepository<>), typeof(WriteRepository<>));
+builder.Services.AddScoped(typeof(IReadRepository<>), typeof(ReadRepository<>));
+builder.Services.AddScoped(typeof(IWriteRepository<>), typeof(WriteRepository<>));
 
 builder.Services.AddControllers();
 
